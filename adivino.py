@@ -1,0 +1,16 @@
+## Adivina adivinador....
+import random
+numero_aleatorio = random.randrange(0,100)
+gane = False
+print("La PC tiene 5 intentos para adivinar un número entre 0 y 100")
+intento = 1
+while intento < 6 and not gane:
+    numero_generado = random.randrange(0,100)
+    if numero_generado == numero_aleatorio:
+        print('Ganaste! y necesitaste {} intentos!!!'.format(intento))
+        gane = True
+    else:
+        print('Mmmm ... No.. ese número no es... Seguí intentando.')
+        intento += 1
+if not gane:
+    print('\n Perdió la PC :(\n El número era: {}'.format(numero_aleatorio))
